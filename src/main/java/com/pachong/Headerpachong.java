@@ -284,6 +284,27 @@ private static String loginurl="https://rapaport.auth0.com/usernamepassword/logi
 		   getdata.addHeader("Host", "member.rapnet.com");
 		   return getdata;
 	}
+	/**
+	 * 下载一个图片的地址解析
+	 * //			GET /RapNet/Search/GetImageFile.aspx?LotID=85870606&FileType=IMAGE HTTP/1.1
+	 * **/
+	public static HttpGet newimgerURL(String url) {
+		//logger.error("列表中的一个图片或文件的地址解析:"+url);
+		HttpGet getdata = null;
+		getdata = new HttpGet(url);
+	//	getdata.addHeader("Host", "member.rapnet.com");
+		getdata.addHeader("User-Agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:56.0) Gecko/20100101 Firefox/56.0");
+	//	getdata.addHeader("Accept", "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8");
+	//	getdata.addHeader("Accept-Language", "zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3");
+	//	getdata.addHeader("Accept-Encoding", "gzip, deflate");
+		//   getdata.addHeader("Referer", Referer);
+	//	getdata.addHeader("Upgrade-Insecure-Requests", "1");
+	//	getdata.addHeader("Connection", "keep-alive");
+	//	getdata.addHeader("Upgrade-Insecure-Requests", "1");
+		return getdata;
+	}
+
+
 	/**  
 	 * 列表中详情数据的解析
 	 *GET /RapNet/Search/ExpandFullDetails.aspx?DiamondID=83487226&Page=1&RowID=0&SearchType=REGULAR&DRows=50&Xtn=-1&newcerts=0 HTTP/1.1

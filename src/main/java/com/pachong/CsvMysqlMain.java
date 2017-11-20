@@ -19,11 +19,7 @@ import au.com.bytecode.opencsv.CSVReader;
 
 /**文件入库**/
 public class CsvMysqlMain {
-	
-	
-	
-    
-    
+
 	public static ArrayList<File> filelist=new ArrayList<File>();
     public static void getFileList(String strPath) {
     	
@@ -47,9 +43,7 @@ public class CsvMysqlMain {
          }else{
         	 System.out.println("错误");
          }
-       
-        
-    }
+     }
 	public static void main(String[] d){
 		
         String path = "D:\\spaga"; // 路径
